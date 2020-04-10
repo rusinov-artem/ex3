@@ -30,7 +30,7 @@ echo "This is better make file\n";
      //link it all together
      $dir = __DIR__;
      `g++ -o build/prog build/main.o build/func.o build/staticlib.a {$dir}/build/sharedlib.so`;
-     `g++ -o build/test1 build/test1.o -pthread /root/googletest-release-1.10.0/build/lib/libgtest.a /root/googletest-release-1.10.0/build/lib/libgtest_main.a `;
+     `g++ -o build/test1 build/test1.o -pthread -lgtest -lgtest_main `;
      `ln -s build/prog prog`;
      `ln -s build/test1 test`;
 
